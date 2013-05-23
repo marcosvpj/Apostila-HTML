@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WebDev</title>
+	<link rel="stylesheet" href="estilo.css">
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=html"></script>
+</head>
+<body>
+	<header id="topo">
+		<a href="tags.html" title="Tags HTML" class="logo"><b>&lt;</b>Tags<b>&gt;</b></a>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="html.html" title="HTML">HTML</a></li>
+			<li><a href="#teoria" title="Compotamento das Tags">Comportamento</a></li>
+			<li><a href="#estrutura" title="Tags da estrutura do documento HTML">Estrutura</a></li>
+			<li><a href="#basica" title="Tags básicas">Básicas</a></li>
+			<li><a href="#layout" title="Tags para layout">Layout</a></li>
+			<li><a href="#listas" title="Tags para listas">Listas</a></li>
+			<li><a href="#tabelas" title="Tags para tabelas">Tabelas</a></li>
+
+			<li><a href="css.html" title="Como criar uma regra CSS">Regras CSS</a></li>
+		</ul>
+	</nav>
+	<article>
+		<hr>
+		<section id="teoria">
+			<h1>Compotamento das Tags</h1>
+			<p>Há pequenas regras básicas que nós já conhecemos e que estão no HTML desde o início. Estas regras definem onde os elementos podem ou não estar. Se eles podem ser filhos ou pais de outros elementos e quais os seus comportamentos.</p>
+
+			<p>Dentre todas as categorias de modelos de conteúdo, existem dois tipos de elementos: elementos de linha e de bloco.</p>
+			<p>Os elementos de linha marcam, na sua maioria das vezes, texto. Alguns exemplos: a, strong, em, img, input, abbr, span.</p>
+
+			<p>Os elementos de blocos são como caixas, que dividem o conteúdo nas seções do layout.</p>
+
+			<p>Abaixo segue algumas premissas que você precisa relembrar e conhecer:</p>
+
+			<ul>
+				<li>Os elementos de linha podem conter outros elementos de linha, dependendo da categoria que ele se encontra. Por exemplo: o elemento a não pode conter o elemento label.</li>
+				<li>Os elementos de linha nunca podem conter elementos de bloco.</li>
+				<li>Elementos de bloco sempre podem conter elementos de linha.</li>
+				<li>Elementos de bloco podem conter elementos de bloco, dependendo da categoria que ele se encontra. Por exemplo, um parágrafo não pode conter um DIV. Mas o contrário é possível.</li>
+				<li>Estes dois grandes grupos podem ser divididos em categorias. Estas categorias dizem qual modelo de conteúdo o elemento trabalha e como pode ser seu comportamento.</li>
+			</ul>
+
+			<hr class="quebra">
+			<a href="#topo">Subir</a>
+		</section>
+
+		<section id="estrutura">
+			<h2>Tags que formam a estrutura basica de um documento HTML</h2>
+
+			<table>
+				<thead>
+					<th>Tag</th>
+					<th>Descrição</th>
+					<th>Exemplo</th>
+				</thead>
+				<tr>
+					<td>&lt;!DOCTYPE&gt;</td>
+					<td>O DOCTYPE indica a versão do html que estamos utilizando.<br>É a primeira tag do documento HTML.</td>
+					<td><pre class="prettyprint">&lt;!DOCTYPE html&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;html&gt;</td>
+					<td>Delimita o inicio e o fim do código HTML.<br>Todas as outras tags estarão dentro deste par.</td>
+					<td><pre class="prettyprint">&lt;html&gt;
+...
+&lt;/html&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;head&gt;</td>
+					<td>Delimita o cabelho do documento HTML.<br> Contem informações sobre o documento como o titulo e outras informações que não são conteudo do documento.</td>
+					<td><pre class="prettyprint">&lt;head&gt;
+...
+&lt;/head&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;title&gt;</td>
+					<td>Define o titulo do documento. <br>Todo documento HTML deve conter um. <br>Ele não pode conteru outras tags.</td>
+					<td><pre class="prettyprint">&lt;title&gt;Aqui vai o titulo do documento&lt;/title&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;meta&gt;</td>
+					<td>Contem informações sobre o documento, que não façam parte do conteudo do documento.</td>
+					<td><pre class="prettyprint">&lt;meta name="Author" content="Marcos Vinicios" /&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;link&gt;</td>
+					<td>Define uma relação estre este documento e algum outro. Geralmente utilizado para carregar folhas de estilo css. <br> Deve ir dentro da tag <b>&lt;head&gt;</b></td>
+					<td><pre class="prettyprint">&lt;link rel="stylesheet" href="estilo.css"&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;script&gt;</td>
+					<td>Cria um script dentro do documento HTML. Pode aparecer tanto na tag <b>&lt;head&gt;</b> quanto na tag <b>&lt;body&gt;</b></td>
+					<td><pre class="prettyprint">&lt;!DOCTYPE html&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;body&gt;</td>
+					<td>Delimita o conteudo do documento HTML.<br>Praticamente tudo que é visivel para o usuário ira dentro desta tag.</td>
+					<td><pre class="prettyprint">&lt;body&gt;
+...
+&lt;/body&gt;</pre></td>
+				</tr>
+			</table>
+<!-- 			<ul>
+				<li>doctype</li>
+				<li>html
+					<ul>
+						<li>head
+							<ul>
+								<li>meta</li>
+								<li>title</li>
+								<li>link</li>
+								<li>script</li>
+							</ul>
+						</li>
+						<li>body
+						</li>
+					</ul>
+				</li>
+			</ul> -->
+			<hr class="quebra">
+			<a href="#topo">Subir</a>
+		</section>
+
+		<section id="basica">		
+			<h2>Tags Básicas</h2>
+
+			<table>
+				<thead>
+					<th>Tag</th>
+					<th>Descrição</th>
+					<th>Exemplo</th>
+				</thead>
+				<tr>
+					<td>&lt;h1&gt; .. &lt;h6&gt;</td>
+					<td>Titulo de primeiro a sexto nivel. Serve para definir uma hierarquia lógica para o documento</td>
+					<td><pre class="prettyprint">&lt;h1&gt;Titulo de maior importância&lt;/h1&gt;
+&lt;h6&gt;Titulo de menor importância&lt;/h6&gt;
+</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;p&gt;</td>
+					<td>Texto de paragrafo</td>
+					<td><pre class="prettyprint">&lt;p&gt;Titulo&lt;/p&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;a&gt;</td>
+					<td>Link</td>
+					<td><pre class="prettyprint">&lt;a href="http://www.google.com" title="Descrição do link"&gt;
+Clique aqui
+&lt;/a&gt;</pre></td>
+				</tr>
+				<tr>
+					<td>&lt;img&gt;</td>
+					<td>Imagem</td>
+					<td><pre class="prettyprint">&lt;img src="caminho/para/imagem.jpg" title="Descrição da imagem"
+ alt="Texto alternativo" /&gt;</pre></td>
+				</tr>
+			</table>
+
+			<ul>
+				<li>h1 .. h6</li>
+				<li>p</li>
+				<li>a</li>
+				<li>b</li>
+				<li>strong</li>
+				<li>i</li>
+				<li>em</li>
+				<li>pre</li>
+				<li>address</li>
+			</ul>
+
+			
+
+			<hr class="quebra">
+			<a href="#topo">Subir</a>
+		</section>
+		
+		<h2 id="layout">Tags para Layout</h2>
+		
+		<ul>
+			<li>img</li>
+			<li>div</li>
+			<li>span</li>
+			<li>section</li>
+			<li>header</li>
+			<li>footer</li>
+			<li>article</li>
+			<li>aside</li>
+			<li></li>
+		</ul>
+		
+		<hr class="quebra">
+		<a href="#topo">Subir</a>
+
+		<h2 id="listas">Listas</h2>
+		
+		<hr class="quebra">
+		<a href="#topo">Subir</a>
+
+		<h2 id="tabelas">Tabelas</h2>
+
+	</article>
+	<footer>
+		<section class="licenca">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br />Este trabalho foi licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.pt">Creative Commons - Atribuição-NãoComercial 3.0 Não Adaptada</a>.
+		</section>
+	</footer>
+</body>
+</html>
